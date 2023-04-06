@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: create
+    show-sql: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/order_service_deb
+    username: postgres
+    password: axror123
+  application:
+    name: ORDER-SERVICE
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
